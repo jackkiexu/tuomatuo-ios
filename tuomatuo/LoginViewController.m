@@ -8,16 +8,20 @@
 
 #import "LoginViewController.h"
 #import "BaseTabBarViewController.h"
+#import "LMPlaceField.h"
+#import "UIImage+Extend.h"
+#import "GreenButtn.h"
+#import "AddUserInfoViewController.h"
 
 @interface LoginViewController ()
 
-@property (nonatomic, strong) UIImageView *loginBackGroundView;
-@property (nonatomic, strong) UIButton *weixinBtn;
-@property (nonatomic, strong) UIButton *qqBtn;
-@property (nonatomic, strong) UIImageView *wechat;
-@property (nonatomic, strong) UIImageView *QQ;
-@property (nonatomic, strong) UILabel *weichatLable;
-@property (nonatomic, strong) UILabel *QQLable;
+@property (nonatomic, strong) UIImageView *tuomatuo_icon;
+@property (nonatomic, strong) LMPlaceField *mobileTf;
+@property (nonatomic, strong) LMPlaceField *codeTf;
+@property (nonatomic, strong) UIButton *getCodeBtn;
+@property (nonatomic, strong) UIButton *loginBtn;
+@property (nonatomic, strong) UILabel *leftLab;
+@property (nonatomic, strong) UIButton *protocolBtn;
 
 @end
 
@@ -27,6 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"登陆";
     [self layoutSubViews];
 }
 
@@ -52,132 +57,224 @@
 }
 */
 
+- (void)btnClick:(UIButton *)btn{
+    AddUserInfoViewController *vc = [[AddUserInfoViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - UITextFieldDelegate
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (textField == _mobileTf) {
+        NSInteger strLength = textField.text.length - range.length + string.length;
+//        
+//        if (strLength == 10 && _codeTf.text.length == 4) {
+//            [_loginBtn setEnabled:YES];
+//        }else{
+//            [_loginBtn setEnabled:NO];
+//        }
+        
+        if (strLength > 11){
+            return NO;
+        }
+        //        NSString *text = nil;
+        //        //如果string为空，表示删除
+        //        if (string.length > 0) {
+        //            text = [NSString stringWithFormat:@"%@%@",textField.text,string];
+        //        }else{
+        //            text = [_mobileTf.text substringToIndex:range.location];
+        //        }
+    }
+    
+    if (textField == _codeTf) {
+        
+        NSInteger strLength = textField.text.length - range.length + string.length;
+        if (strLength > 4){
+            return NO;
+        }
+        //        NSString *text = nil;
+        //        if (string.length > 0) {
+        //            text = [NSString stringWithFormat:@"%@%@",textField.text,string];
+        //        }else{
+        //            text = [_mobileTf.text substringToIndex:range.location];
+        //        }
+        //是否符合登录条件
+//        if (strLength == 4) {
+//            [_loginBtn setEnabled:YES];
+//        }else{
+//            [_loginBtn setEnabled:NO];
+//        }
+    }
+    return YES;
+}
+
 - (void)layoutSubViews{
-    [self.view addSubview:self.loginBackGroundView];
-    [self.loginBackGroundView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.right.bottom.equalTo(self.view);
+    
+    CGFloat offset = 47; // 左右间距
+    CGFloat topPadding = 221*PERCENT_HEIGH; // 上下间距
+    
+    [self.view addSubview:self.tuomatuo_icon];
+    [self.tuomatuo_icon mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(159);
+        make.top.equalTo(self.view).offset(95*PERCENT_HEIGH);
+        make.width.equalTo(57);
+        make.height.equalTo(57);
     }];
-//    self.loginBackGroundView.
     
-    CGFloat offset = 32.0; // 左右间距
-    
-    
-    [self.view addSubview:self.weixinBtn];
-    [self.weixinBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.view addSubview:self.mobileTf];
+    [self.mobileTf mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(offset);
-        make.top.equalTo(self.view).offset(482*PERCENT_HEIGH);
+        make.top.equalTo(self.view).offset(topPadding);
         make.right.equalTo(self.view).offset(-offset);
-        make.height.mas_equalTo(50*PERCENT_HEIGH);
+        make.height.mas_equalTo(40*PERCENT_HEIGH);
     }];
     
-    [self.view addSubview:self.qqBtn];
-    [self.qqBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view).offset(offset);
-        make.bottom.equalTo(self.view).offset(-45*PERCENT_HEIGH);
-        make.right.equalTo(self.view).offset(-offset);
-        make.height.mas_equalTo(50*PERCENT_HEIGH);
+    [self.view addSubview:self.codeTf];
+    [self.codeTf mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.mobileTf);
+        make.top.equalTo(self.mobileTf).offset(50*PERCENT_HEIGH);
+        make.height.mas_equalTo(40*PERCENT_HEIGH);
     }];
     
-    [self.weixinBtn addSubview:self.wechat];
-    [self.wechat mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.weixinBtn).offset(28);
-        make.top.equalTo(self.weixinBtn).offset(6);
-        make.bottom.equalTo(self.weixinBtn).offset(-5);
-        make.height.mas_equalTo(39*PERCENT_HEIGH);
-        make.width.mas_equalTo(39*PERCENT_HEIGH);
+    [self.view addSubview:self.getCodeBtn];
+    [self.getCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.codeTf).offset(5);
+        make.right.equalTo(self.codeTf.right);
+        make.height.mas_equalTo(19*PERCENT_HEIGH);
+        make.width.mas_equalTo(63*PERCENT_WIDTH);
     }];
     
-    [self.qqBtn addSubview:self.QQ];
-    [self.QQ mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.qqBtn).offset(28);
-        make.top.equalTo(self.qqBtn).offset(6);
-        make.bottom.equalTo(self.qqBtn).offset(-5);
-        make.height.mas_equalTo(39*PERCENT_HEIGH);
-        make.width.mas_equalTo(39*PERCENT_HEIGH);
+    for (int i = 0; i < 2; i++) {
+        UILabel *lable = [UILabel new];
+        lable.backgroundColor = FTColor_LightGray;
+        [self.view addSubview:lable];
+        
+        [lable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.mobileTf);
+            make.top.equalTo(self.view).offset((topPadding + 45)*PERCENT_HEIGH+i*(50*PERCENT_HEIGH));
+            make.height.equalTo(@1);
+        }];
+    }
+    
+    [self.view addSubview:self.loginBtn];
+    [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.mobileTf);
+        make.top.equalTo(self.view).offset(topPadding+120);
+        make.height.mas_equalTo(44*PERCENT_HEIGH);
     }];
     
-    [self.weixinBtn addSubview:self.weichatLable];
-    [self.weichatLable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.weixinBtn).offset(107);
-        make.top.equalTo(self.weixinBtn).offset(13);
-        make.bottom.equalTo(self.weixinBtn).offset(-12);
-        make.width.mas_equalTo(96*PERCENT_HEIGH);
+    int Label_offset = (self.view.frame.size.width - 155 - 98)/2;
+    
+    [self.view addSubview:self.leftLab];
+    [self.leftLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.loginBtn.mas_bottom).offset(20);
+        make.left.equalTo(self.view).offset(Label_offset + 2);
+        make.width.equalTo(@155);
+        make.height.equalTo(@15);
     }];
     
-    [self.qqBtn addSubview:self.QQLable];
-    [self.QQLable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.qqBtn).offset(107);
-        make.top.equalTo(self.qqBtn).offset(13);
-        make.bottom.equalTo(self.qqBtn).offset(-12);
-        make.width.mas_equalTo(96*PERCENT_HEIGH);
+    [self.view addSubview:self.protocolBtn];
+    [self.protocolBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.loginBtn.mas_bottom).offset(20);
+        make.left.equalTo(self.leftLab.right).offset(-1);
+        make.width.equalTo(@98);
+        make.height.equalTo(self.leftLab);
     }];
-    
 }
 
-- (UIImageView *)loginBackGroundView{
-    if(!_loginBackGroundView){
-        UIImage *image = [UIImage imageNamed:@"loginBackground"];
-         _loginBackGroundView = [[UIImageView alloc] initWithImage:image];
+
+- (UIImageView *)tuomatuo_icon{
+    if(!_tuomatuo_icon){
+        UIImage *image = [UIImage imageNamed:@"tuomatuo_icon"];
+        _tuomatuo_icon = [[UIImageView alloc] initWithImage:image];
     }
-    return _loginBackGroundView;
+    return _tuomatuo_icon;
 }
 
-- (UIButton *)weixinBtn{
-    if (!_weixinBtn) {
-        _weixinBtn = [[UIButton alloc] init];
-        [_weixinBtn addTarget:self action:@selector(toTabBarControllor) forControlEvents:UIControlEventTouchUpInside];
-        _weixinBtn.layer.cornerRadius = 4;
-        _weixinBtn.layer.borderWidth = 1;
-        _weixinBtn.layer.borderColor = [UIColor whiteColor].CGColor;
-        _weixinBtn.layer.shadowColor = [UIColor clearColor].CGColor;
+- (LMPlaceField *)mobileTf{
+    if (!_mobileTf) {
+        _mobileTf = [LMPlaceField new];
+        _mobileTf.placeholder = @"输入你的手机号码";
+        _mobileTf.keyboardType = UIKeyboardTypeNumberPad;
+        _mobileTf.delegate = self;
+        _mobileTf.textColor = FTColor_Black_1;
+        _mobileTf.font = [UIFont fontWithName:FontName size:20];
     }
-    return _weixinBtn;
+    return _mobileTf;
 }
 
-- (UIButton *)qqBtn{
-    if (!_qqBtn) {
-        _qqBtn = [[UIButton alloc] init];
-        [_weixinBtn addTarget:self action:@selector(toTabBarControllor) forControlEvents:UIControlEventTouchUpInside];
-        _qqBtn.layer.cornerRadius = 4;
-        _qqBtn.layer.borderWidth = 1;
-        _qqBtn.layer.borderColor = [UIColor whiteColor].CGColor;
-        _qqBtn.layer.shadowColor = [UIColor clearColor].CGColor;
+- (LMPlaceField *)codeTf{
+    if (!_codeTf) {
+        _codeTf = [LMPlaceField new];
+        _codeTf.placeholder = @"验证码";
+        _codeTf.keyboardType = UIKeyboardTypeNumberPad;
+        _codeTf.delegate = self;
+        _codeTf.textColor = FTColor_Black_1;
+        _codeTf.font =[UIFont fontWithName:FontName size:20];
     }
-    return _qqBtn;
+    return _codeTf;
 }
 
-- (UIView *)wechat{
-    if (!_wechat) {
-        _wechat = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"weichat"]];
+- (UIButton *)getCodeBtn{
+    if (!_getCodeBtn) {
+        _getCodeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_getCodeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+        _getCodeBtn.titleLabel.font = [UIFont fontWithName:FontName size:12];
+        [_getCodeBtn setTitleColor:FTColor_Black_3 forState:UIControlStateNormal];
+        [_getCodeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+        _getCodeBtn.layer.borderColor = FTColor_Black_3.CGColor;
+        _getCodeBtn.layer.borderWidth = 1;
+        [_getCodeBtn setBackgroundImage:[UIImage imageWithColor:BGColor_GetCodeBtn_disable] forState:UIControlStateDisabled];
+
+        _getCodeBtn.tag = 1;
+        [_getCodeBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _wechat;
+    return _getCodeBtn;
 }
 
-- (UIView *)QQ{
-    if (!_QQ) {
-        _QQ = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"QQ"]];
+- (UIButton *)loginBtn{
+    if (!_loginBtn) {
+        _loginBtn = [GreenButtn buttonWithType:UIButtonTypeCustom];
+        [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+        _loginBtn.layer.cornerRadius = 5;
+        _loginBtn.clipsToBounds = YES;
+        _loginBtn.tag = 2;
+        [_loginBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        _loginBtn.enabled = NO;
     }
-    return _QQ;
+    return _loginBtn;
 }
 
-- (UILabel *)weichatLable{
-    if (!_weichatLable) {
-        _weichatLable = [[UILabel alloc] init];
-        _weichatLable.font = [UIFont fontWithName:FontName size:24];
-        _weichatLable.textColor = [UIColor whiteColor];
-        _weichatLable.text = @"微信登陆";
+- (UILabel *)leftLab{
+    if (!_leftLab) {
+        _leftLab = [UILabel new];
+        _leftLab.text = @"点击登陆, 即表示你同意";
+        _leftLab.font = [UIFont fontWithName:FontName size:14];
+        _leftLab.textColor = FTColor_Black_3;
     }
-    return _weichatLable;
+    return _leftLab;
 }
 
-- (UILabel *)QQLable{
-    if (!_QQLable) {
-        _QQLable = [[UILabel alloc] init];
-        _QQLable.font = [UIFont fontWithName:FontName size:24];
-        _QQLable.textColor = [UIColor whiteColor];
-        _QQLable.text = @"QQ登陆";
+- (UIButton *)protocolBtn{
+    if (!_protocolBtn) {
+        _protocolBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_protocolBtn setTitle:@"密号服务协议。" forState:UIControlStateNormal];
+        [_protocolBtn setTitleColor:FTColor_Black_3 forState:UIControlStateNormal];
+        _protocolBtn.titleLabel.font = [UIFont fontWithName:FontName size:14];
+        _protocolBtn.tag = 3;
+        _protocolBtn.clipsToBounds = NO;
+        [_protocolBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        UIView *view = [UIView new];
+        view.backgroundColor = FTColor_Black_3;
+        [_protocolBtn addSubview:view];
+        [view makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(_protocolBtn);
+            make.top.equalTo(_protocolBtn.bottom).offset(-1);
+            make.width.equalTo(_protocolBtn).offset(-12);
+            make.height.equalTo(@0.5);
+        }];
     }
-    return _QQLable;
+    return _protocolBtn;
 }
 
 

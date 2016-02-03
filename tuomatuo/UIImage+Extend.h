@@ -10,6 +10,7 @@
 
 @interface UIImage (Extend)
 
++ (UIImage *)imageWithColor:(UIColor *)color;
 + (UIImage *)cutImage:(NSString *)imgName;
 + (NSData*)compressionImageWithImage:(UIImage *)curentImage;
 

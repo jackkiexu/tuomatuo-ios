@@ -10,4 +10,10 @@
 
 @implementation LMPlaceField
 
+- (CGRect)placeholderRectForBounds:(CGRect)bounds{
+    CGRect rect = [super textRectForBounds:bounds];
+    rect.origin.y += 4;
+    return rect;
+}
+
 @end

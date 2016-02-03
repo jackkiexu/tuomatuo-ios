@@ -1,5 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
+link_with 'tuomatuo', 'tuomatuoTests'
+
 platform :ios, "8.0"
 
 pod 'RESideMenu'
