@@ -12,6 +12,7 @@
 #import "UIImage+Extend.h"
 #import "GreenButtn.h"
 #import "AddUserInfoViewController.h"
+#import "BaseTabBarViewController.h"
 
 @interface LoginViewController ()
 
@@ -40,13 +41,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)toTabBarControllor{
-    BaseTabBarViewController *baseTabBarControllor = [[BaseTabBarViewController alloc] init];
-    [self presentViewController:baseTabBarControllor animated:YES completion:^{
-        NSLog(@"login go to baseTabBarControllor");
-    }];
-}
-
 /*
 #pragma mark - Navigation
 
@@ -58,8 +52,16 @@
 */
 
 - (void)btnClick:(UIButton *)btn{
-    AddUserInfoViewController *vc = [[AddUserInfoViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (btn.tag == 2) {
+        BaseTabBarViewController *baseTabBarControllor = [[BaseTabBarViewController alloc] init];
+        [self presentViewController:baseTabBarControllor animated:YES completion:^{
+            NSLog(@"login go to baseTabBarControllor");
+        }];
+
+    }else if(btn.tag == 1){
+        AddUserInfoViewController *vc = [[AddUserInfoViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 #pragma mark - UITextFieldDelegate
@@ -240,7 +242,7 @@
         _loginBtn.clipsToBounds = YES;
         _loginBtn.tag = 2;
         [_loginBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-        _loginBtn.enabled = NO;
+        _loginBtn.enabled = YES;
     }
     return _loginBtn;
 }
