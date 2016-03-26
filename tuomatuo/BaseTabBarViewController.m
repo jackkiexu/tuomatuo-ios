@@ -64,14 +64,16 @@
     
     UserDynamicViewController *userDynamicVC = [[UserDynamicViewController alloc] init];
     _userDynamicNC = [[UINavigationController alloc] initWithRootViewController:userDynamicVC];
-    UIImage *dynamicImg = [[UIImage imageNamed:@"dynamic"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    _userDynamicNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"动态" image:dynamicImg selectedImage:dynamicImg];
+    UIImage *dynamicImgGrey = [[UIImage imageNamed:@"dynamic_tab_grey"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *dynamicImgRed = [[UIImage imageNamed:@"dynamic_tab_red"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    _userDynamicNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"动态" image:dynamicImgGrey selectedImage:dynamicImgRed];
     _userDynamicNC.tabBarItem.imageInsets = insets;
     
     SearchViewController *searchVC = [[SearchViewController alloc] init];
     _searchNC = [[UINavigationController alloc] initWithRootViewController:searchVC];
-    UIImage *searchImg = [[UIImage imageNamed:@"search"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    _searchNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"搜索" image:searchImg selectedImage:searchImg];
+    UIImage *searchImgGrey = [[UIImage imageNamed:@"search_tab_grey"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *searchImgRed = [[UIImage imageNamed:@"search_tab_red"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    _searchNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"搜索" image:searchImgGrey selectedImage:searchImgRed];
     _searchNC.tabBarItem.imageInsets = insets;
     
     PlusViewController *plusVC = [[PlusViewController alloc] init];
@@ -83,14 +85,16 @@
     
     FriendViewController *friendVC = [[FriendViewController alloc] init];
     _friendNC = [[UINavigationController alloc] initWithRootViewController:friendVC];
-    UIImage *friendImg = [[UIImage imageNamed:@"friend"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    _friendNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"朋友" image:friendImg selectedImage:friendImg];
+    UIImage *friendImgGrey = [[UIImage imageNamed:@"friends_tab_grey"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *friendImgRed = [[UIImage imageNamed:@"friends_tab_red"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    _friendNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"朋友" image:friendImgGrey selectedImage:friendImgRed];
     _friendNC.tabBarItem.imageInsets = insets;
     
     MeViewController *meVC = [[MeViewController alloc] init];
     _meNC = [[UINavigationController alloc] initWithRootViewController:meVC];
-    UIImage *ownImg = [[UIImage imageNamed:@"own"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    _meNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我" image:ownImg selectedImage:ownImg];
+    UIImage *ownImgGrey = [[UIImage imageNamed:@"own_tab_grey"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *ownImgRed = [[UIImage imageNamed:@"own_tab_red"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    _meNC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我" image:ownImgGrey selectedImage:ownImgRed];
     _meNC.tabBarItem.imageInsets = insets;
     
     self.tabBar.backgroundColor = BGColor_Tabbar;

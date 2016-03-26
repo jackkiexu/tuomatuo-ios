@@ -21,8 +21,10 @@
 #import "UIImageView+WebCache.h"
 #import "MJRefresh.h"
 #import "BaseHelper.h"
+#include "JSONModel.h"
 
 #import "BaseViewController.h"
+#import "JumpToOtherVCHandler.h"
 
 
 #define kDataBasePath                                    [[(NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES)) lastObject]stringByAppendingPathComponent:kDataBaseName] // 数据库路径

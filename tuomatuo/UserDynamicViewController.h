@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserDynamicViewController : UIViewController
+@interface UserDynamicViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end

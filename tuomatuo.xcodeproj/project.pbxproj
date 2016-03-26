@@ -15,9 +15,20 @@
 		1E8848B41C42280800FC185B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E8848B21C42280800FC185B /* LaunchScreen.storyboard */; };
 		1E8848BF1C42280800FC185B /* tuomatuoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8848BE1C42280800FC185B /* tuomatuoTests.m */; };
 		1E8848CA1C42280800FC185B /* tuomatuoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8848C91C42280800FC185B /* tuomatuoUITests.m */; };
+		1E8C4AB41C85814800539184 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8C4AB31C85814800539184 /* Reveal.framework */; };
+		1E8C4AB71C98637D00539184 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C4AB61C98637D00539184 /* SettingViewController.m */; };
+		1E8C4ABA1C98663B00539184 /* JumpToOtherVCHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C4AB91C98663B00539184 /* JumpToOtherVCHandler.m */; };
+		1E8C4ABD1C986AEF00539184 /* SetNickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C4ABC1C986AEF00539184 /* SetNickViewController.m */; };
+		1E8C4AC01C986B0E00539184 /* SetSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C4ABF1C986B0E00539184 /* SetSexViewController.m */; };
+		1E8C4AC31C986B2E00539184 /* SetMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C4AC21C986B2E00539184 /* SetMobileViewController.m */; };
+		1E8C4B0A1C99ABD500539184 /* DynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C4B091C99ABD500539184 /* DynamicCell.m */; };
+		1E8C4B0D1C99AC5100539184 /* UserDynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C4B0C1C99AC5100539184 /* UserDynamicModel.m */; };
 		1E91C1B71C61A3BF005E7854 /* LMPlaceField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C1B61C61A3BF005E7854 /* LMPlaceField.m */; };
 		1E91C1BB1C61C9D5005E7854 /* GreenButtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C1BA1C61C9D5005E7854 /* GreenButtn.m */; };
 		1E91C1BE1C61D28B005E7854 /* AddUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C1BD1C61D28B005E7854 /* AddUserInfoViewController.m */; };
+		1ECC3C201C7D985C0006F541 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECC3C1F1C7D985C0006F541 /* JSONModel.m */; };
+		1ECC3C231C7D99230006F541 /* FriendsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECC3C221C7D99230006F541 /* FriendsModel.m */; };
+		1ECC3C261C7DA2F30006F541 /* FriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECC3C251C7DA2F30006F541 /* FriendsCell.m */; };
 		1EE4795F1C423613000A906E /* NSArray+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE479541C423613000A906E /* NSArray+Extend.m */; };
 		1EE479601C423613000A906E /* NSData+DataExtends.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE479561C423613000A906E /* NSData+DataExtends.m */; };
 		1EE479611C423613000A906E /* NSDateExtended.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE479581C423613000A906E /* NSDateExtended.m */; };
@@ -88,12 +99,33 @@
 		1E8848C51C42280800FC185B /* tuomatuoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tuomatuoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8848C91C42280800FC185B /* tuomatuoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tuomatuoUITests.m; sourceTree = "<group>"; };
 		1E8848CB1C42280800FC185B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E8C4AB31C85814800539184 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		1E8C4AB51C98637D00539184 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		1E8C4AB61C98637D00539184 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		1E8C4AB81C98663B00539184 /* JumpToOtherVCHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpToOtherVCHandler.h; sourceTree = "<group>"; };
+		1E8C4AB91C98663B00539184 /* JumpToOtherVCHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpToOtherVCHandler.m; sourceTree = "<group>"; };
+		1E8C4ABB1C986AEF00539184 /* SetNickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNickViewController.h; sourceTree = "<group>"; };
+		1E8C4ABC1C986AEF00539184 /* SetNickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNickViewController.m; sourceTree = "<group>"; };
+		1E8C4ABE1C986B0E00539184 /* SetSexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetSexViewController.h; sourceTree = "<group>"; };
+		1E8C4ABF1C986B0E00539184 /* SetSexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetSexViewController.m; sourceTree = "<group>"; };
+		1E8C4AC11C986B2E00539184 /* SetMobileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetMobileViewController.h; sourceTree = "<group>"; };
+		1E8C4AC21C986B2E00539184 /* SetMobileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetMobileViewController.m; sourceTree = "<group>"; };
+		1E8C4B081C99ABD500539184 /* DynamicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicCell.h; sourceTree = "<group>"; };
+		1E8C4B091C99ABD500539184 /* DynamicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicCell.m; sourceTree = "<group>"; };
+		1E8C4B0B1C99AC5100539184 /* UserDynamicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDynamicModel.h; sourceTree = "<group>"; };
+		1E8C4B0C1C99AC5100539184 /* UserDynamicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDynamicModel.m; sourceTree = "<group>"; };
 		1E91C1B51C61A3BF005E7854 /* LMPlaceField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMPlaceField.h; sourceTree = "<group>"; };
 		1E91C1B61C61A3BF005E7854 /* LMPlaceField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMPlaceField.m; sourceTree = "<group>"; };
 		1E91C1B91C61C9D5005E7854 /* GreenButtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenButtn.h; sourceTree = "<group>"; };
 		1E91C1BA1C61C9D5005E7854 /* GreenButtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenButtn.m; sourceTree = "<group>"; };
 		1E91C1BC1C61D28B005E7854 /* AddUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserInfoViewController.h; sourceTree = "<group>"; };
 		1E91C1BD1C61D28B005E7854 /* AddUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserInfoViewController.m; sourceTree = "<group>"; };
+		1ECC3C1E1C7D985C0006F541 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		1ECC3C1F1C7D985C0006F541 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
+		1ECC3C211C7D99230006F541 /* FriendsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsModel.h; sourceTree = "<group>"; };
+		1ECC3C221C7D99230006F541 /* FriendsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsModel.m; sourceTree = "<group>"; };
+		1ECC3C241C7DA2F30006F541 /* FriendsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsCell.h; sourceTree = "<group>"; };
+		1ECC3C251C7DA2F30006F541 /* FriendsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsCell.m; sourceTree = "<group>"; };
 		1EE479531C423613000A906E /* NSArray+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extend.h"; sourceTree = "<group>"; };
 		1EE479541C423613000A906E /* NSArray+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extend.m"; sourceTree = "<group>"; };
 		1EE479551C423613000A906E /* NSData+DataExtends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+DataExtends.h"; sourceTree = "<group>"; };
@@ -179,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				020850BD9948F2018EA3DF5E /* libPods.a in Frameworks */,
+				1E8C4AB41C85814800539184 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +236,7 @@
 		1E8848981C42280800FC185B = {
 			isa = PBXGroup;
 			children = (
+				1E8C4AB31C85814800539184 /* Reveal.framework */,
 				1E8848A31C42280800FC185B /* tuomatuo */,
 				1E8848BD1C42280800FC185B /* tuomatuoTests */,
 				1E8848C81C42280800FC185B /* tuomatuoUITests */,
@@ -435,6 +469,10 @@
 			children = (
 				1EE48BB61C454E9D000A906E /* UserModel.h */,
 				1EE48BB71C454E9D000A906E /* UserModel.m */,
+				1ECC3C211C7D99230006F541 /* FriendsModel.h */,
+				1ECC3C221C7D99230006F541 /* FriendsModel.m */,
+				1E8C4B0B1C99AC5100539184 /* UserDynamicModel.h */,
+				1E8C4B0C1C99AC5100539184 /* UserDynamicModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -464,6 +502,8 @@
 		1EE48B9B1C43E93A000A906E /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				1ECC3C1E1C7D985C0006F541 /* JSONModel.h */,
+				1ECC3C1F1C7D985C0006F541 /* JSONModel.m */,
 				1EE48B9C1C43E991000A906E /* BaseModel.h */,
 				1EE48B9D1C43E991000A906E /* BaseModel.m */,
 				1EE48B9F1C43EB3C000A906E /* BaseApi.h */,
@@ -481,6 +521,8 @@
 			children = (
 				1EE48BA31C43ECE8000A906E /* APIRequestHandler.h */,
 				1EE48BA41C43ECE8000A906E /* APIRequestHandler.m */,
+				1E8C4AB81C98663B00539184 /* JumpToOtherVCHandler.h */,
+				1E8C4AB91C98663B00539184 /* JumpToOtherVCHandler.m */,
 			);
 			name = Handlers;
 			sourceTree = "<group>";
@@ -517,6 +559,8 @@
 			children = (
 				1EE48BC11C4935B3000A906E /* UserDynamicViewController.h */,
 				1EE48BC21C4935B3000A906E /* UserDynamicViewController.m */,
+				1E8C4B081C99ABD500539184 /* DynamicCell.h */,
+				1E8C4B091C99ABD500539184 /* DynamicCell.m */,
 			);
 			name = dynamic;
 			sourceTree = "<group>";
@@ -565,6 +609,8 @@
 			children = (
 				1EE48BD41C4BBD55000A906E /* FriendViewController.h */,
 				1EE48BD51C4BBD55000A906E /* FriendViewController.m */,
+				1ECC3C241C7DA2F30006F541 /* FriendsCell.h */,
+				1ECC3C251C7DA2F30006F541 /* FriendsCell.m */,
 			);
 			name = friend;
 			sourceTree = "<group>";
@@ -576,6 +622,14 @@
 				1EE48BD91C4BBD81000A906E /* MeViewController.m */,
 				1E91C1BC1C61D28B005E7854 /* AddUserInfoViewController.h */,
 				1E91C1BD1C61D28B005E7854 /* AddUserInfoViewController.m */,
+				1E8C4AB51C98637D00539184 /* SettingViewController.h */,
+				1E8C4AB61C98637D00539184 /* SettingViewController.m */,
+				1E8C4ABB1C986AEF00539184 /* SetNickViewController.h */,
+				1E8C4ABC1C986AEF00539184 /* SetNickViewController.m */,
+				1E8C4ABE1C986B0E00539184 /* SetSexViewController.h */,
+				1E8C4ABF1C986B0E00539184 /* SetSexViewController.m */,
+				1E8C4AC11C986B2E00539184 /* SetMobileViewController.h */,
+				1E8C4AC21C986B2E00539184 /* SetMobileViewController.m */,
 			);
 			name = me;
 			sourceTree = "<group>";
@@ -850,11 +904,15 @@
 				1E91C1BB1C61C9D5005E7854 /* GreenButtn.m in Sources */,
 				1EE48BC31C4935B3000A906E /* UserDynamicViewController.m in Sources */,
 				1EE48BEE1C4D2301000A906E /* PopularView.m in Sources */,
+				1ECC3C231C7D99230006F541 /* FriendsModel.m in Sources */,
 				1EE4796C1C4239C2000A906E /* BaseDaoImpl.m in Sources */,
+				1E8C4AC31C986B2E00539184 /* SetMobileViewController.m in Sources */,
+				1ECC3C201C7D985C0006F541 /* JSONModel.m in Sources */,
 				1EE48BB81C454E9D000A906E /* UserModel.m in Sources */,
 				1EE479621C423613000A906E /* NSDateFormatter+Extend.m in Sources */,
 				1EE479641C423613000A906E /* NSString+Extend.m in Sources */,
 				1EE48BD21C4BBD16000A906E /* SearchViewController.m in Sources */,
+				1E8C4AC01C986B0E00539184 /* SetSexViewController.m in Sources */,
 				1EE479631C423613000A906E /* NSDictionary+Extend.m in Sources */,
 				1EE48BA81C43F046000A906E /* BaseHelper.m in Sources */,
 				1EE48BEB1C4D22E2000A906E /* SexAndAgeView.m in Sources */,
@@ -862,18 +920,22 @@
 				1EE48BBC1C454F02000A906E /* UserApi.m in Sources */,
 				1EE48BE51C4D212C000A906E /* BaseView.m in Sources */,
 				1E8848A91C42280800FC185B /* AppDelegate.m in Sources */,
+				1E8C4ABA1C98663B00539184 /* JumpToOtherVCHandler.m in Sources */,
 				1EE48BB51C454C45000A906E /* UserEntity.m in Sources */,
 				1EE48BF11C4D2332000A906E /* DynamicImgCollection.m in Sources */,
+				1E8C4B0D1C99AC5100539184 /* UserDynamicModel.m in Sources */,
 				1EE48BB01C454627000A906E /* BaseEntity.m in Sources */,
 				1EE48B9A1C428B5A000A906E /* UIImageView+Extend.m in Sources */,
 				1EE48BBF1C469401000A906E /* CurrentUser.m in Sources */,
 				1EE48BE11C4D1F25000A906E /* UserDynamicCell.m in Sources */,
+				1E8C4ABD1C986AEF00539184 /* SetNickViewController.m in Sources */,
 				1EE479601C423613000A906E /* NSData+DataExtends.m in Sources */,
 				1EE479711C4242F4000A906E /* LoginViewController.m in Sources */,
 				1EE4795F1C423613000A906E /* NSArray+Extend.m in Sources */,
 				1EE48BA11C43EB3C000A906E /* BaseApi.m in Sources */,
 				1EE48BCF1C4BBCEE000A906E /* BaseViewController.m in Sources */,
 				1EE48BE81C4D22B7000A906E /* AvatarImgView.m in Sources */,
+				1E8C4AB71C98637D00539184 /* SettingViewController.m in Sources */,
 				1EE48BDE1C4BCB31000A906E /* PlusViewController.m in Sources */,
 				1EE48B9E1C43E991000A906E /* BaseModel.m in Sources */,
 				1E8848A61C42280800FC185B /* main.m in Sources */,
@@ -882,9 +944,11 @@
 				1EE48BAD1C453E81000A906E /* BaseTabBarViewController.m in Sources */,
 				1EE48B991C428B5A000A906E /* UIImage+Extend.m in Sources */,
 				1EE48BCA1C49377E000A906E /* UserDynamicTableViewCell.m in Sources */,
+				1E8C4B0A1C99ABD500539184 /* DynamicCell.m in Sources */,
 				1E91C1B71C61A3BF005E7854 /* LMPlaceField.m in Sources */,
 				1EE48BA51C43ECE8000A906E /* APIRequestHandler.m in Sources */,
 				1EE48BD61C4BBD55000A906E /* FriendViewController.m in Sources */,
+				1ECC3C261C7DA2F30006F541 /* FriendsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1025,9 +1089,80 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "tuomatuo/tuomatuo-prefix.pch";
 				INFOPLIST_FILE = tuomatuo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"AFOAuth2Manager\"",
+					"-l\"CTAssetsPickerController\"",
+					"-l\"DZNEmptyDataSet\"",
+					"-l\"DateTools\"",
+					"-l\"FDFullscreenPopGesture\"",
+					"-l\"FMDB\"",
+					"-l\"FMDBMigrationManager\"",
+					"-l\"GVUserDefaults\"",
+					"-l\"HappyDNS\"",
+					"-l\"JTSImageViewController\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJRefresh\"",
+					"-l\"MTLFMDBAdapter\"",
+					"-l\"Mantle\"",
+					"-l\"Masonry\"",
+					"-l\"PureLayout\"",
+					"-l\"QBPopupMenu\"",
+					"-l\"QRCodeReaderViewController\"",
+					"-l\"Qiniu\"",
+					"-l\"RESideMenu\"",
+					"-l\"Reachability\"",
+					"-l\"SDWebImage\"",
+					"-l\"SSKeychain\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"UIActionSheet+Blocks\"",
+					"-l\"UIActivityIndicator-for-SDWebImage\"",
+					"-l\"UITableView+FDTemplateLayoutCell\"",
+					"-l\"UITextView+Placeholder\"",
+					"-l\"WebViewJavascriptBridge\"",
+					"-l\"c++\"",
+					"-l\"jastor\"",
+					"-l\"pop\"",
+					"-l\"resolv\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alimi.tuomatuo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1039,9 +1174,80 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "tuomatuo/tuomatuo-prefix.pch";
 				INFOPLIST_FILE = tuomatuo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"AFOAuth2Manager\"",
+					"-l\"CTAssetsPickerController\"",
+					"-l\"DZNEmptyDataSet\"",
+					"-l\"DateTools\"",
+					"-l\"FDFullscreenPopGesture\"",
+					"-l\"FMDB\"",
+					"-l\"FMDBMigrationManager\"",
+					"-l\"GVUserDefaults\"",
+					"-l\"HappyDNS\"",
+					"-l\"JTSImageViewController\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJRefresh\"",
+					"-l\"MTLFMDBAdapter\"",
+					"-l\"Mantle\"",
+					"-l\"Masonry\"",
+					"-l\"PureLayout\"",
+					"-l\"QBPopupMenu\"",
+					"-l\"QRCodeReaderViewController\"",
+					"-l\"Qiniu\"",
+					"-l\"RESideMenu\"",
+					"-l\"Reachability\"",
+					"-l\"SDWebImage\"",
+					"-l\"SSKeychain\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"UIActionSheet+Blocks\"",
+					"-l\"UIActivityIndicator-for-SDWebImage\"",
+					"-l\"UITableView+FDTemplateLayoutCell\"",
+					"-l\"UITextView+Placeholder\"",
+					"-l\"WebViewJavascriptBridge\"",
+					"-l\"c++\"",
+					"-l\"jastor\"",
+					"-l\"pop\"",
+					"-l\"resolv\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alimi.tuomatuo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
